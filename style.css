@@ -28,7 +28,8 @@ p{
 }
 
 .settings{
-    display: flex;
+    background-color: darkgray;
+    display: none;
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
@@ -74,6 +75,7 @@ label{
 
 input{
     margin: 0;
+    background-color: lightgray;
     border: 1px solid gray;
     padding: 0;
     width: 60%;
@@ -95,12 +97,20 @@ input:focus{
     min-width: 300px;
 }
 
-.board{
+#board{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 300px;
     width: 300px;
+}
+
+#board > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .footer{
