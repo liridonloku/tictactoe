@@ -66,12 +66,7 @@ const gameBoard = (() => {
         players.checkGameEnd();
     }
     const changeTurn = () =>{
-        if (turn=== players.player1.name){
-            turn = players.player2.name;
-        }
-        else {
-            turn = players.player1.name;
-        }
+        turn = players.player1.name;
     }
     const clearBoard = () =>{
         for(let i=0;i<3;i++){
