@@ -111,8 +111,6 @@ document.getElementById('start').addEventListener('click', () =>{
     gameBoard.clearBoard();
     players.changeName1();
     players.changeName2();
-    console.log(players.player1.name);
-    console.log(players.player2.name);
     game();
 });
 
