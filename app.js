@@ -3,8 +3,8 @@ const playerFactory = (name, symbol) => {
 };
 
 const players = (() => {
-    const firstPlayer = document.getElementById('player1').value;
-    const secondPlayer = document.getElementById('player2').value;
+    let firstPlayer = document.getElementById('player1').value;
+    let secondPlayer = document.getElementById('player2').value;
     const player1 = playerFactory(firstPlayer, 'X');
     const player2 = playerFactory(secondPlayer, 'O');
     const checkGameEnd = () => {
@@ -36,8 +36,14 @@ const players = (() => {
             resultContainer.style.display = 'flex';
         }
     }
+    const changeName1 = () => {
+        player1.name = document.getElementById('player1').value;
+    }
+    const changeName2 = () => {
+        player2.name = document.getElementById('player2').value;
+    }
     return {
-        player1, player2, checkGameEnd
+        player1, player2, checkGameEnd, changeName1, changeName2
     };
 })();
 
@@ -52,13 +58,13 @@ const gameBoard = (() => {
     const play = (e) => {
         let symbol;
         if(e.target.textContent === ''){
-            if(turn === players.player1.name || turn === ''){
+            if(turn === 'player1' || turn === ''){
                 symbol = players.player1.symbol;
-                turn = players.player2.name;
+                turn = 'player2';
             }
             else{
                 symbol = players.player2.symbol;
-                turn = players.player1.name;
+                turn = 'player1';
             }
             board[e.target.getAttribute('data1')][e.target.getAttribute('data2')]=symbol;
             e.target.textContent = symbol;
@@ -66,7 +72,7 @@ const gameBoard = (() => {
         players.checkGameEnd();
     }
     const changeTurn = () =>{
-        turn = players.player1.name;
+        turn = 'player1';
     }
     const clearBoard = () =>{
         for(let i=0;i<3;i++){
@@ -99,6 +105,8 @@ document.getElementById('start').addEventListener('click', () =>{
     document.querySelector('.settings').style.display = 'none';
     gameBoard.changeTurn();
     gameBoard.clearBoard();
+    players.changeName1();
+    players.changeName2();
     game();
 });
 
