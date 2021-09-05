@@ -1,0 +1,111 @@
+:root{
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-grow: 1;
+    min-height: 300px;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    position: absolute;
+    width: 90vw;
+    max-width: 300px;
+    height: 60vh;
+    max-height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.settings > div{
+    height: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#start{
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    box-shadow: 0 0 3px gray;
+}
+
+label{
+    font-size: 14px;
+}
+
+input{
+    margin: 0;
+    border: 1px solid gray;
+    padding: 0;
+    width: 60%;
+    height: 20px;
+    border-radius: 3px;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 3px gray;
+}
+
+.container{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A simple Tic Tac Toe game played on your browser">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>TicTacToe</title>
 </head>
 <body>
@@ -12,17 +14,28 @@
         <h1>Tic Tac Toe</h1>
     </div>
     <div class="main">
-        <div class="settings">
-
-        </div>
         <div class="container">
             <div class="board">
-                
+
             </div>
         </div>
     </div>
     <div class="footer">
 
+    </div>
+    <div class="settings">
+        <div><p>Player Names</p></div>
+        <div class="player1">
+            <label for="player1">Player 1:</label>
+            <input type="text" name="player1" id="player1" placeholder="player1">
+        </div>
+        <div class="player2">
+            <label for="player1">Player 2:</label>
+            <input type="text" name="player2" id="player2" placeholder="player2">
+        </div>
+        <div class="start">
+            <button id="start">Start</button>
+        </div>
     </div>
 </body>
 </html>
