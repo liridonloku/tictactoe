@@ -102,6 +102,10 @@ const game = (() => {
 });
 
 document.getElementById('start').addEventListener('click', () =>{
+    if(document.getElementById('player1').value === '' || document.getElementById('player2').value === ''){
+        alert('Please input player names')
+        return;
+    }
     document.querySelector('.settings').style.display = 'none';
     gameBoard.changeTurn();
     gameBoard.clearBoard();
